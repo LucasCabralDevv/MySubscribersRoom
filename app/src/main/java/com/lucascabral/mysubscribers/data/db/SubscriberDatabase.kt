@@ -16,11 +16,11 @@ abstract class SubscriberDatabase: RoomDatabase() {
         @Volatile
         private var INSTANCE: SubscriberDatabase? = null
 
-        fun getInstance(context: Context): SubscriberDatabase? {
+        fun getInstance(context: Context): SubscriberDatabase {
             synchronized(this) {
                 var instance: SubscriberDatabase? = INSTANCE
                 if (instance == null) {
-                    instance == Room.databaseBuilder(
+                    instance = Room.databaseBuilder(
                         context,
                         SubscriberDatabase::class.java,
                         "subscriber_db"

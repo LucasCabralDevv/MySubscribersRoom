@@ -2,8 +2,11 @@
     <string name="app_name">My Subscribers</string>
 
     Subscriber Fragment
-    <string name="subscribers_name_hint">Subscriber name</string>
+    <string name="subscribers_name_hint">Name</string>
     <string name="subscriber_email_hint">E-mail</string>
     <string name="subscriber_add_button_text">Add</string>
     <string name="subscriber_title">Subscriber</string>
+
+    <string name="subscriber_inserted_successfully">Subscriber was successfully inserted</string>
+    <string name="subscriber_error_to_insert">There was an error when inserting subscriber </string>
 </resources>
