@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.subscriberlist.SubscriberListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -16,14 +16,13 @@
         tools:listitem="@layout/subscriber_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabSubscriber"
+        android:id="@+id/fabAddSubscriber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_add_24"
-        android:contentDescription="@string/fab_contentDescription" />
-
+        android:contentDescription="@string/fab_contentDescription"
+        android:src="@drawable/ic_add_24" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
