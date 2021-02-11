@@ -21,6 +21,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/text_subscriber_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -28,6 +29,7 @@
             tools:text="Lucas Cabral"/>
 
         <TextView
+            android:id="@+id/text_subscriber_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
