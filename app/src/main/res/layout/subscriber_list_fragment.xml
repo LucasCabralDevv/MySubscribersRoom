@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.subscriberlist.SubscriberListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSubscriber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_anchor="@+id/recyclerSubscriber"
+        app:layout_anchorGravity="center"
+        tools:listitem="@layout/subscriber_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSubscriber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_white_24"
+        android:contentDescription="@string/fab_contentDescription" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

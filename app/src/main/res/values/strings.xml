@@ -9,4 +9,5 @@
 
     <string name="subscriber_inserted_successfully">Subscriber was successfully inserted</string>
     <string name="subscriber_error_to_insert">There was an error when inserting subscriber </string>
+    <string name="fab_contentDescription">FAB to add a new subscriber</string>
 </resources>

@@ -5,7 +5,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
@@ -27,7 +26,6 @@ class SubscriberFragment : Fragment(R.layout.subscriber_fragment) {
                 val repository: SubscriberRepository = DatabaseDataSource(subscriberDAO)
                 return SubscriberViewModel(repository) as T
             }
-
         }
     }
 
