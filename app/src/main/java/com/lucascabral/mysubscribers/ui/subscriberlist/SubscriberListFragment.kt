@@ -11,6 +11,7 @@ import com.lucascabral.mysubscribers.R
 import com.lucascabral.mysubscribers.data.db.SubscriberDatabase
 import com.lucascabral.mysubscribers.data.db.dao.SubscriberDAO
 import com.lucascabral.mysubscribers.data.db.entity.SubscriberEntity
+import com.lucascabral.mysubscribers.extension.navigateWithAnimations
 import com.lucascabral.mysubscribers.repository.DatabaseDataSource
 import com.lucascabral.mysubscribers.repository.SubscriberRepository
 import kotlinx.android.synthetic.main.subscriber_list_fragment.*
@@ -46,7 +47,7 @@ class SubscriberListFragment : Fragment(R.layout.subscriber_list_fragment) {
 
     private fun configureViewListeners() {
         fabAddSubscriber.setOnClickListener {
-            findNavController().navigate(R.id.subscriberFragment)
+            findNavController().navigateWithAnimations(R.id.subscriberFragment)
         }
     }
 }
