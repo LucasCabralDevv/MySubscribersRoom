@@ -9,12 +9,22 @@
         android:id="@+id/subscriberListFragment"
         android:name="com.lucascabral.mysubscribers.ui.subscriberlist.SubscriberListFragment"
         android:label="@string/subscribers_title"
-        tools:layout="@layout/subscriber_list_fragment" />
+        tools:layout="@layout/subscriber_list_fragment" >
+        <action
+            android:id="@+id/action_subscriberListFragment_to_subscriberFragment"
+            app:destination="@id/subscriberFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/subscriberFragment"
         android:name="com.lucascabral.mysubscribers.ui.subscriber.SubscriberFragment"
         android:label="@string/subscriber_title"
-        tools:layout="@layout/subscriber_fragment" />
+        tools:layout="@layout/subscriber_fragment" >
+        <argument
+            android:name="Subscriber"
+            app:argType="com.lucascabral.mysubscribers.data.db.entity.SubscriberEntity"
+            android:defaultValue="@null"
+            app:nullable="true" />
+    </fragment>
 
 </navigation>

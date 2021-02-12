@@ -1,6 +1,5 @@
 package com.lucascabral.mysubscribers.repository
 
-import androidx.lifecycle.LiveData
 import com.lucascabral.mysubscribers.data.db.entity.SubscriberEntity
 
 interface SubscriberRepository {

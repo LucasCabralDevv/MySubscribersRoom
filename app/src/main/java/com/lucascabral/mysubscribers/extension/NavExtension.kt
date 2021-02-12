@@ -1,6 +1,7 @@
 package com.lucascabral.mysubscribers.extension
 
 import androidx.navigation.NavController
+import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import com.lucascabral.mysubscribers.R
 
@@ -17,3 +18,11 @@ fun NavController.navigateWithAnimations(
 ) {
     this.navigate(destinationId, null, animation)
 }
+
+fun NavController.navigateWithAnimations(
+    directions: NavDirections,
+    animation: NavOptions = slideLeftOptions
+) {
+    this.navigate(directions, animation)
+}
+
