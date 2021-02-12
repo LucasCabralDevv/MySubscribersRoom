@@ -11,7 +11,10 @@
 
     <string name="subscriber_inserted_successfully">Subscriber was successfully inserted</string>
     <string name="subscriber_updated_successfully">Subscriber was successfully updated</string>
+    <string name="subscriber_deleted_successfully">Subscriber was successfully deleted</string>
     <string name="subscriber_error_to_inserted">There was an error when inserting subscriber</string>
     <string name="subscriber_error_to_updated">There was an error when updating subscriber</string>
+    <string name="subscriber_error_to_deleted">There was an error when deleting subscriber</string>
     <string name="fab_contentDescription">FAB to add a new subscriber</string>
+    <string name="subscriber_delete_button_text">Delete</string>
 </resources>

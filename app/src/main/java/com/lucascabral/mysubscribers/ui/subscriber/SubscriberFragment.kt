@@ -39,7 +39,8 @@ class SubscriberFragment : Fragment(R.layout.subscriber_fragment) {
         args.Subscriber?.let { subscriber ->
             subscriberNameInputEditText.setText(subscriber.name)
             subscriberEmailInputEditText.setText(subscriber.email)
-            subscriberButton.setText(R.string.subscriber_button_update)
+            subscriberAddButton.setText(R.string.subscriber_button_update)
+            subscriberDeleteButton.visibility = View.VISIBLE
         }
 
         observeEvents()
@@ -49,16 +50,12 @@ class SubscriberFragment : Fragment(R.layout.subscriber_fragment) {
     private fun observeEvents() {
         viewModel.subscriberStateEventData.observe(viewLifecycleOwner) { SubscriberState ->
             when (SubscriberState) {
-                is SubscriberViewModel.SubscriberState.Inserted -> {
+                is SubscriberViewModel.SubscriberState.Inserted,
+                is SubscriberViewModel.SubscriberState.Updated,
+                is SubscriberViewModel.SubscriberState.Deleted -> {
                     clearFields()
                     hideKeyboard()
                     requireView().requestFocus()
-
-                    findNavController().popBackStack()
-                }
-                is SubscriberViewModel.SubscriberState.Updated -> {
-                    clearFields()
-                    hideKeyboard()
                     findNavController().popBackStack()
                 }
             }
@@ -82,11 +79,15 @@ class SubscriberFragment : Fragment(R.layout.subscriber_fragment) {
     }
 
     private fun setListeners() {
-        subscriberButton.setOnClickListener {
+        subscriberAddButton.setOnClickListener {
             val name = subscriberNameInputEditText.text.toString()
             val email = subscriberEmailInputEditText.text.toString()
 
             viewModel.addOrUpdateSubscriber(name, email, args.Subscriber?.id ?: 0)
+        }
+
+        subscriberDeleteButton.setOnClickListener {
+            viewModel.removeSubscriber(args.Subscriber?.id ?: 0)
         }
     }
 }
