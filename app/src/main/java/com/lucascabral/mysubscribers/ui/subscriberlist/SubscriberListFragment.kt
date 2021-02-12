@@ -35,6 +35,11 @@ class SubscriberListFragment : Fragment(R.layout.subscriber_list_fragment) {
         configureViewListeners()
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.getSubscribers()
+    }
+
     private fun observeViewModelEvents() {
         viewModel.allSubscribersEvent.observe(viewLifecycleOwner) { allSubscribers ->
             val subscriberListAdapter = SubscriberListAdapter(allSubscribers)

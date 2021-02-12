@@ -13,5 +13,5 @@ interface SubscriberRepository {
 
     suspend fun deleteAllSubscriber()
 
-    fun getAllSubscribers(): LiveData<List<SubscriberEntity>>
+    suspend fun getAllSubscribers(): List<SubscriberEntity>
 }
